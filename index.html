@@ -3,18 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Richard - Blog</title>
+  <title>Comment Prospérer sur les Réseaux</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Script Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9443340060928874" 
+     crossorigin="anonymous"></script>
+  
   <style>
     body {
       font-family: 'Inter', Times New Roman;
       margin: 0;
       padding: 0;
-      background-color: lightblue;
+      background-color: #f4f4f4;
       color: #333;
     }
     header {
-      background-color: blue;
+      background-color: #4CAF50;
       color: white;
       padding: 2rem;
       text-align: center;
@@ -23,65 +28,42 @@
       display: flex;
       justify-content: center;
       gap: 2rem;
-      background-color: red;
+      background-color: #333;
       padding: 1rem;
     }
     nav a {
-      color: yellow;
+      color: white;
       text-decoration: none;
       font-weight: 600;
     }
     section {
       padding: 2rem;
     }
-    .gallery img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
-    .social-links a {
-      margin-right: 1rem;
-      text-decoration: none;
-      color: #1e1e2f;
-      font-weight: 600;
-    }
-    form {
+    .video-gallery {
       display: flex;
-      flex-direction: column;
-      max-width: 500px;
-      margin: auto;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
     }
-    input, textarea {
-      margin-bottom: 1rem;
-      padding: 0.75rem;
-      border: 1px solid yellow;
+    .video-gallery iframe {
+      width: 320px;
+      height: 180px;
       border-radius: 8px;
     }
-    button {
-      padding: 0.75rem;
-      background-color: yellow;
-      color: blue;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: 600;
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    footer a {
+      color: #4CAF50;
+      text-decoration: none;
+      font-weight: bold;
     }
 
-    #quiz {
-      background-color: white;
-      padding: 2rem;
-      margin: 2rem auto;
-      border-radius: 8px;
-      max-width: 600px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .question p {
-      font-weight: 600;
-    }
-
-    /* MODAL styles + animations */
-    #modal {
+    /* Modal styles */
+    #modal-about, #modal-privacy {
       display: none;
       position: fixed;
       top: 0;
@@ -94,7 +76,7 @@
       animation: fadeIn 0.3s ease forwards;
     }
 
-    #modal .content {
+    #modal-about .content, #modal-privacy .content {
       background: white;
       padding: 2rem;
       border-radius: 10px;
@@ -113,143 +95,151 @@
       from { transform: scale(0.8); opacity: 0; }
       to { transform: scale(1); opacity: 1; }
     }
+
+    /* Section Contact */
+    #contact {
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-top: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #contact h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      color: #333;
+    }
+
+    #contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    #contact input,
+    #contact textarea {
+      padding: 1rem;
+      font-size: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      width: 100%;
+    }
+
+    #contact input[type="text"],
+    #contact input[type="email"] {
+      height: 40px;
+    }
+
+    #contact textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    #contact button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 1rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #contact button:hover {
+      background-color: #45a049;
+    }
+
+    #contact button:active {
+      background-color: #388e3c;
+    }
   </style>
-  <!-- Google AdSense script  -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9443340060928874"
-     crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
-    <h1>Bienvenue sur la platforme NOVISSI TOGO</h1>
-    <p>à l'ocasion de la fête nationale de l'indépendance , le ministère de l'économie à jugé bon de faire un don de 10500 fr à tout citoyens togolais.</p>
+    <h1>Bienvenue sur le site pour apprendre à prospérer sur les réseaux sociaux</h1>
+    <p>Découvrez des astuces pratiques pour réussir sur des plateformes comme TikTok, YouTube et plus encore !</p>
   </header>
 
   <nav>
-    <a href="#photos">Photos</a>
-    <a href="#reseaux">Réseaux</a>
+    <a href="javascript:void(0);" onclick="openModal('about')">À propos</a>
+    <a href="#videos">Vidéo</a>
+    <a href="javascript:void(0);" onclick="openModal('privacy')">Politique de confidentialité</a>
     <a href="#contact">Contact</a>
-    <a href="#quiz">Quiz</a>
   </nav>
-  <!-- Bannière Google AdSense -->
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-client="ca-pub-9443340060928874"
-     data-ad-slot="1234567890"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 
-  <section id="photos">
-    <h2>instructions </h2>
-    <div class="gallery">
-      <img src="Screenshot_20250419-153128.png" alt="Photo exemple">
-      <img src="markup_57152.png" alt="Photo exemple">
+  <!-- Galerie de vidéos -->
+  <section id="videos">
+    <h2>Nos Vidéos</h2>
+    <p>Voici quelques vidéos pour vous aider à réussir sur les réseaux sociaux :</p>
+    <div class="video-gallery">
+      <iframe src="https://www.youtube.com/embed/https://youtu.be/Pq1GPKVKzqQ?si=15oeBSqcnFwpgMai" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/https://youtu.be/WMWFNS-ZzLo?si=6lbQZofHTRRVQ2sR" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/https://youtube.com/shorts/4FFXf3T8nJY?si=NLenvirFtZ65y3jW" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </section>
 
-  <section id="reseaux">
-    <h2>Nos plateformes</h2>
-    <div class="social-links">
-      <a href="https://www.tiktok.com/@mumbai2paris?_t=ZN-8vdBsnE2yd4&_r=1" target="_blank">tik tok</a>
-      <a href="https://youtube.com/@mumbai2paris?si=fqfJIXJrjURnX-Ab" target="_blank">youtube</a>
-      <a href="https://wa.me/qr/IWCNNJ3MB3W4N1" target="_blank">whatsapp</a>
-    </div>
+  <!-- Publicité Google AdSense -->
+  <section id="adsense">
+    <h2>flash info</h2>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-9443340060928874"
+         data-ad-slot="1234567890"
+         data-ad-format="auto"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
   </section>
 
+  <!-- Contact -->
   <section id="contact">
-    <h2>vos infos de payement</h2>
+    <h2>Contact</h2>
     <form action="mailto:richardawi222@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="Nom" placeholder="votre nom" required>
-      <input type="email" name="Email" placeholder="votre email" required>
-      <textarea name="Message" rows="2" placeholder="votre numero de telephone" required></textarea>
-      <button type="submit">soumetre</button>
+      <input type="text" name="Nom" placeholder="Votre nom" required>
+      <input type="email" name="Email" placeholder="Votre email" required>
+      <textarea name="Message" rows="1" placeholder="Votre message" required></textarea>
+      <button type="submit">Envoyer</button>
     </form>
   </section>
 
-  <section id="quiz">
-    <h2>repondez à ces 5 questions pour reclamer votre prix</h2>
-    <form id="quiz-form">
-      <div class="question">
-        <p>1. Qui est le primier président du togo ?</p>
-        <label><input type="radio" name="q1" value="0"> cléber dadjo</label><br>
-        <label><input type="radio" name="q1" value="1"> sylvanus olimpio</label><br>
-        <label><input type="radio" name="q1" value="0"> bill gatte </label><br>
-        <label><input type="radio" name="q1" value="0"> donald trump</label>
-      </div><br>
-
-      <div class="question">
-        <p>2. Quelle couleur ne fait pas partie du drapeau togolais ?</p>
-        <label><input type="radio" name="q2" value="0"> Rouge</label><br>
-        <label><input type="radio" name="q2" value="0"> Vert</label><br>
-        <label><input type="radio" name="q2" value="1"> Bleu</label><br>
-        <label><input type="radio" name="q2" value="0"> Jaune</label>
-      </div><br>
-
-      <div class="question">
-        <p>3. Combien y a-t-il de préfectures au togo ?</p>
-        <label><input type="radio" name="q3" value="0"> 117</label><br>
-        <label><input type="radio" name="q3" value="1"> 39</label><br>
-        <label><input type="radio" name="q3" value="0"> 4</label><br>
-        <label><input type="radio" name="q3" value="0"> 5</label>
-      </div><br>
-
-      <div class="question">
-        <p>4. Quel langage officiel du togo ?</p>
-        <label><input type="radio" name="q4" value="0"> le kabyè</label><br>
-        <label><input type="radio" name="q4" value="1"> éwé</label><br>
-        <label><input type="radio" name="q4" value="0"> le français</label><br>
-        <label><input type="radio" name="q4" value="0"> l'anglais</label>
-      </div><br>
-
-      <div class="question">
-        <p>5. Quelle planète est la plus proche du Soleil ?</p>
-        <label><input type="radio" name="q5" value="1"> Mercure</label><br>
-        <label><input type="radio" name="q5" value="0"> Vénus</label><br>
-        <label><input type="radio" name="q5" value="0"> Terre</label><br>
-        <label><input type="radio" name="q5" value="0"> Mars</label>
-      </div><br>
-
-      <button type="button" onclick="corrigerQuiz()">reclamer</button>
-    </form>
-    <p id="resultat" style="font-weight:bold; padding-top: 1rem;"></p>
-  </section>
-
-  <!-- Modal contextuel -->
-  <div id="modal" onclick="fermerModal()">
+  <!-- Modals (contextuel) -->
+  <div id="modal-about" onclick="closeModal('about')">
     <div class="content" onclick="event.stopPropagation()">
-      <h3>Félicitations !</h3>
-      <p>Vous avez gagné !<br>Revenez dans une heure de temps et vérifiez votre récompense,<br>ou veuillez patienter pendant 15 minutes.</p>
-      <button onclick="fermerModal()" style="margin-top: 1rem; padding: 0.5rem 1rem; background-color: yellow; color: blue; font-weight: bold; border: none; border-radius: 6px; cursor: pointer;">OK</button>
+      <h3>À propos</h3>
+      <p>Bienvenue sur notre plateforme où nous vous partageons des conseils précieux pour réussir et prospérer sur les réseaux sociaux comme TikTok, YouTube, Instagram et bien d'autres. Nous vous fournissons des stratégies éprouvées pour augmenter votre visibilité, interagir avec votre public et booster vos opportunités.</p>
+      <button onclick="closeModal('about')">Fermer</button>
     </div>
   </div>
 
-  <!-- Son -->
-  <audio id="winSound" src="https://www.myinstants.com/media/sounds/tuturu.mp3"></audio>
+  <div id="modal-privacy" onclick="closeModal('privacy')">
+    <div class="content" onclick="event.stopPropagation()">
+      <h3>Politique de confidentialité</h3>
+      <p>Nous respectons votre vie privée. Les informations collectées sur ce site ne seront utilisées que pour améliorer votre expérience et ne seront jamais partagées avec des tiers sans votre consentement. En utilisant ce site, vous acceptez nos conditions d'utilisation et notre politique de confidentialité.</p>
+      <button onclick="closeModal('privacy')">Fermer</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Prospérer sur les Réseaux</p>
+    <p><a href="javascript:void(0);" onclick="openModal('about')">À propos</a> | <a href="javascript:void(0);" onclick="openModal('privacy')">Politique de confidentialité</a> | <a href="#contact">Contact</a></p>
+  </footer>
 
   <script>
-    function corrigerQuiz() {
-      const form = document.getElementById('quiz-form');
-      let score = 0;
-      for (let i = 1; i <= 5; i++) {
-        const reponse = form.querySelector('input[name="q' + i + '"]:checked');
-        if (reponse && reponse.value === "1") {
-          score++;
-        }
-      }
-
-      document.getElementById('resultat').textContent = "Tu as obtenu " + score + " / 5 des quedtions";
-
-      // Son de victoire
-      document.getElementById('winSound').play();
-
-      // Afficher le modal
-      document.getElementById('modal').style.display = "flex";
+    // Ouvre le modal
+    function openModal(modalId) {
+      document.getElementById('modal-' + modalId).style.display = "flex";
     }
 
-    function fermerModal() {
-      document.getElementById('modal').style.display = "none";
+    // Ferme le modal
+    function closeModal(modalId) {
+      document.getElementById('modal-' + modalId).style.display = "none";
     }
   </script>
 </body>
