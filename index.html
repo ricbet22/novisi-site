@@ -3,259 +3,296 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Comment Prospérer sur les Réseaux</title>
+  <title>Actualités Educatives au Togo</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   
   <!-- Script Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9443340060928874" 
      crossorigin="anonymous"></script>
   
-  <style>
-    body {
-      font-family: 'Inter', Times New Roman;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-    header {
-      background-color: #4CAF50;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      background-color: #333;
-      padding: 1rem;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    section {
-      padding: 2rem;
-    }
-    .video-gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: center;
-    }
-    .video-gallery iframe {
-      width: 320px;
-      height: 180px;
-      border-radius: 8px;
-    }
-    footer {
-      background-color: #333;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-    footer a {
-      color: #4CAF50;
-      text-decoration: none;
-      font-weight: bold;
-    }
+      <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: lightgreen;
+        }
 
-    /* Modal styles */
-    #modal-about, #modal-privacy {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.6);
-      align-items: center;
-      justify-content: center;
-      animation: fadeIn 0.3s ease forwards;
-    }
+        header {
+            background-color: #f4f;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
 
-    #modal-about .content, #modal-privacy .content {
-      background: white;
-      padding: 2rem;
-      border-radius: 10px;
-      max-width: 400px;
-      text-align: center;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-      animation: popUp 0.3s ease forwards;
-    }
+        h1 {
+            font-size: 3em;
+            margin: 0;
+        }
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+        section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
 
-    @keyframes popUp {
-      from { transform: scale(0.8); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
+        article {
+            background-color: lightblue;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 00.1);
+        }
 
-    /* Section Contact */
-    #contact {
-      background-color: #ffffff;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      margin-top: 2rem;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+        article img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
 
-    #contact h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      text-align: center;
-      color: #333;
-    }
+        article h2 {
+            font-size: 2em;
+            color: red;
+            margin-top: 15px;
+        }
 
-    #contact form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
+        article p {
+            font-size: 2.1em;
+            color: black;
+        }
 
-    #contact input,
-    #contact textarea {
-      padding: 1rem;
-      font-size: 1rem;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      width: 100%;
-    }
+        article a {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 1.1em;
+            color: #2e3a59;
+            text-decoration: none;
+        }
 
-    #contact input[type="text"],
-    #contact input[type="email"] {
-      height: 40px;
-    }
+        article a:hover {
+            text-decoration: underline;
+        }
 
-    #contact textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
+        footer {
+            background-color: #2e3a59;
+            color: yellow;
+            padding: 20px;
+            text-align: center;
+        }
 
-    #contact button {
-      background-color: #4CAF50;
-      color: white;
-      padding: 1rem;
-      font-size: 1rem;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
+        footer a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
 
-    #contact button:hover {
-      background-color: #45a049;
-    }
+        footer a:hover {
+            text-decoration: underline;
+        }
 
-    #contact button:active {
-      background-color: #388e3c;
-    }
-  </style>
+        .footer-links {
+            margin-top: 20px;
+        }
+
+        .footer-links a {
+            margin: 0 20px;
+        }
+
+        /* Style pour les blocs de publicité */
+        .adsense-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* Menu contextuel */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: #000;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+
 </head>
 <body>
   <header>
-    <h1>Bienvenue sur le site pour apprendre à prospérer sur les réseaux sociaux</h1>
-    <p>Découvrez des astuces pratiques pour réussir sur des plateformes comme TikTok, YouTube et plus encore !</p>
+    <h1>Bienvenue sur le site internet edutogo</h1>
+    <p>tenez vous au courant de toutes les Actualités Educatives du togo</p>
   </header>
+      <section>
+        <!-- Premier article -->
+        <article>
+            <img src="https://yop.l-frii.com/wp-content/uploads/2023/09/Les-10-priorites-du-gouvernement-pour-lannee-scolaire-2023-2024.jpg" alt="">
+            <h2>Les 7 priorités de l'éducation pour l'année scolaire 2024</h2>
+            <p>Découvrez les nouvelles mesures mises en place par le gouvernement togolais pour cette année scolaire.</p>
+            <a href="#">Lire l'article</a>
+        </article>
 
-  <nav>
-    <a href="javascript:void(0);" onclick="openModal('about')">À propos</a>
-    <a href="#videos">Vidéo</a>
-    <a href="javascript:void(0);" onclick="openModal('privacy')">Politique de confidentialité</a>
-    <a href="#contact">Contact</a>
-  </nav>
-   <!--Avant la galerie des vidéos -->
-<section id="video-introduction">
-  <h2>comment avoir la visibilité sur TikTok</h2>
-  <p>Pour obtenir de la visibilité sur TikTok, publiez régulièrement des vidéos avec des titres et descriptions optimisés, en utilisant des hashtags populaires et des mots-clés pertinents. Participez aux tendances et challenges, tout en intégrant des musiques et effets populaires. Engagez-vous activement avec votre communauté en répondant aux commentaires et en collaborant avec d'autres créateurs. Créez du contenu authentique qui reflète votre personnalité et analysez les performances de vos vidéos pour ajuster vos stratégies et maximiser votre portée.
+        <!-- Bloc de publicité AdSense -->
+        <div class="adsense-container">
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-9443340060928874"
+                data-ad-slot="1234567890"
+                data-ad-format="auto"></ins>
+        </div>
 
-</p></p>
-</section>
+        <!-- Deuxième article -->
+        <article>
+            <img src="https://www.togofirst.com/sites/default/files/styles/large/public/2024-10/1526_salles_de_classe.jpg" alt="">
+            <h2>1526 nouvelles salles de classe pour la rentrée 2024</h2>
+            <p>Le ministère de l'Éducation a annoncé un plan ambitieux pour améliorer les infrastructures scolaires à travers le pays.</p>
+            <a href="#">Lire l'article</a>
+        </article>
 
-  <!-- Galerie de vidéos -->
-  <section id="videos">
-    <h2>Nos Vidéos</h2>
-    <p>Voici quelques vidéos pour vous aider à réussir sur les réseaux sociaux :</p>
-    <div class="video-gallery">
-      <iframe src="https://www.youtube.com/embed/https://youtu.be/Pq1GPKVKzqQ?si=15oeBSqcnFwpgMai" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/https://youtu.be/WMWFNS-ZzLo?si=6lbQZofHTRRVQ2sR" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/https://youtube.com/shorts/4FFXf3T8nJY?si=NLenvirFtZ65y3jW" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-  </section> 
-<section id="video-introduction">
-  <h1>
+        <!-- Bloc de publicité AdSense -->
+        <div class="adsense-container">
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-9443340060928874"
+                data-ad-slot="1234567890"
+                data-ad-format="auto"></ins>
+        </div>
 
-"Merci de visiter notre site. Nous espérons que nos conseils vous aideront à réussir sur les réseaux sociaux et à atteindre vos objectifs !"
+        <!-- Troisième article -->
+        <article>
+            <img src="https://education.gouv.tg/wp-content/uploads/2024/09/enseignement_numerique.jpg" alt="">
+            <h2>Lancement du programme d'enseignement numérique dans les écoles</h2>
+            <p>Le gouvernement a lancé une initiative pour intégrer des outils numériques dans les classes au Togo.</p>
+            <a href="#">Lire l'article</a>
+        </article>
 
-Tu peux bien sûr l'adapter selon ton style.
+        <!-- Bloc de publicité AdSense -->
+        <div class="adsense-container">
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-9443340060928874"
+                data-ad-slot="1234567890"
+                data-ad-format="auto"></ins>
+        </div>
 
-</h1>
+        <!-- Quatrième article -->
+        <article>
+            <img src="https://www.republiquetogolaise.com/sites/default/files/styles/large/public/2024-09/reforme_programme_scolaire.jpg" alt="">
+            <h2>Réforme des programmes scolaires : un nouveau curriculum pour 2024</h2>
+            <p>Le ministère de l'Éducation annonce une mise à jour des programmes scolaires afin de les rendre plus pertinents pour les étudiants de demain.</p>
+            <a href="#">Lire l'article</a>
+        </article>
 
-  <!-- Publicité Google AdSense -->
-  <section id="adsense">
-    <h2>flash info</h2>
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-9443340060928874"
-         data-ad-slot="1234567890"
-         data-ad-format="auto"></ins>
+        <!-- Bloc de publicité AdSense -->
+        <div class="adsense-container">
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-9443340060928874"
+                data-ad-slot="1234567890"
+                data-ad-format="auto"></ins>
+        </div>
+
+        <!-- Cinquième article -->
+        <article>
+            <img src="https://icilome.com/wp-content/uploads/2024/10/bourses_etudes_internationales.jpg" alt="">
+            <h2>Des bourses d'études pour les étudiants togolais à l'international</h2>
+            <p>Le gouvernement a mis en place un nouveau programme de bourses pour encourager les étudiants à poursuivre leurs études à l'étranger.</p>
+            <a href="#">Lire l'article</a>
+        </article>
+
+        <!-- Bloc de publicité AdSense -->
+        <div class="adsense-container">
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-9443340060928874"
+                data-ad-slot="1234567890"
+                data-ad-format="auto"></ins>
+        </div>
+        <!-- Footer avec Menu contextuel -->
+        <footer>
+            <div class="footer-links">
+                <a href="#" id="aboutBtn">À propos</a> |
+                <a href="#" id="privacyBtn">Politique de confidentialité</a>
+            </div>
+            <p>&copy; 2024 Actualités Educatives - Togo. Tous droits réservés.</p>
+        </footer>
+    <!-- Activation de l'annonce AdSense -->
     <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
+        (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-  </section>
+        <!-- Modal : À propos -->
+        <div id="aboutModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeAbout">&times;</span>
+                <h2>À propos</h2>
+                <p>Nous fournissons des informations à jour sur l'éducation au Togo. Notre objectif est de tenir les citoyens informés des nouvelles politiques éducatives, des réformes scolaires et des opportunités d'éducation dans le pays.</p>
+            </div>
+        </div>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <form action="mailto:richardawi222@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="Nom" placeholder="Votre nom" required>
-      <input type="email" name="Email" placeholder="Votre email" required>
-      <textarea name="Message" rows="1" placeholder="Votre message" required></textarea>
-      <button type="submit">Envoyer</button>
-    </form>
-  </section>
+        <!-- Modal : Politique de confidentialité -->
+        <div id="privacyModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closePrivacy">&times;</span>
+                <h2>Politique de confidentialité</h2>
+                <p>Nous respectons votre vie privée et nous engageons à protéger les informations personnelles que vous nous fournissez. Nous utilisons des cookies pour améliorer l'expérience de navigation sur notre site.</p>
+            </div>
+        </div>
 
-  <!-- Modals (contextuel) -->
-  <div id="modal-about" onclick="closeModal('about')">
-    <div class="content" onclick="event.stopPropagation()">
-      <h3>À propos</h3>
-      <p>Bienvenue sur notre plateforme où nous vous partageons des conseils précieux pour réussir et prospérer sur les réseaux sociaux comme TikTok, YouTube, Instagram et bien d'autres. Nous vous fournissons des stratégies éprouvées pour augmenter votre visibilité, interagir avec votre public et booster vos opportunités.</p>
-      <button onclick="closeModal('about')">Fermer</button>
-    </div>
-  </div>
+        <script>
+            // Modals
+            const aboutBtn = document.getElementById("aboutBtn");
+            const privacyBtn = document.getElementById("privacyBtn");
+            const aboutModal = document.getElementById("aboutModal");
+            const privacyModal = document.getElementById("privacyModal");
+            const closeAbout = document.getElementById("closeAbout");
+            const closePrivacy = document.getElementById("closePrivacy");
 
-  <div id="modal-privacy" onclick="closeModal('privacy')">
-    <div class="content" onclick="event.stopPropagation()">
-      <h3>Politique de confidentialité</h3>
-      <p>Nous respectons votre vie privée. Les informations collectées sur ce site ne seront utilisées que pour améliorer votre expérience et ne seront jamais partagées avec des tiers sans votre consentement. En utilisant ce site, vous acceptez nos conditions d'utilisation et notre politique de confidentialité.</p>
-      <button onclick="closeModal('privacy')">Fermer</button>
-    </div>
-  </div>
+            aboutBtn.onclick = function () {
+                aboutModal.style.display = "block";
+            }
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Prospérer sur les Réseaux</p>
-    <p><a href="javascript:void(0);" onclick="openModal('about')">À propos</a> | <a href="javascript:void(0);" onclick="openModal('privacy')">Politique de confidentialité</a> | <a href="#contact">Contact</a></p>
-  </footer>
+            privacyBtn.onclick = function () {
+                privacyModal.style.display = "block";
+            }
 
-  <script>
-    // Ouvre le modal
-    function openModal(modalId) {
-      document.getElementById('modal-' + modalId).style.display = "flex";
-    }
+            closeAbout.onclick = function () {
+                aboutModal.style.display = "none";
+            }
 
-    // Ferme le modal
-    function closeModal(modalId) {
-      document.getElementById('modal-' + modalId).style.display = "none";
-    }
-  </script>
+            closePrivacy.onclick = function () {
+                privacyModal.style.display = "none";
+            }
+
+            window.onclick = function (event) {
+                if (event.target == aboutModal || event.target == privacyModal) {
+                    aboutModal.style.display = "none";
+                    privacyModal.style.display = "none";
+                }
+            }
+        </script>
 </body>
+
 </html>
