@@ -1,298 +1,258 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Actualités Educatives au Togo</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  
-  <!-- Script Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9443340060928874" 
-     crossorigin="anonymous"></script>
-  
-      <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: lightgreen;
-        }
-
-        header {
-            background-color: #f4f;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 3em;
-            margin: 0;
-        }
-
-        section {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 20px;
-        }
-
-        article {
-            background-color: lightblue;
-            padding: 20px;
-            margin-bottom: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 00.1);
-        }
-
-        article img {
-            max-width: 100%;
-            border-radius: 8px;
-        }
-
-        article h2 {
-            font-size: 2em;
-            color: red;
-            margin-top: 15px;
-        }
-
-        article p {
-            font-size: 2.1em;
-            color: black;
-        }
-
-        article a {
-            display: inline-block;
-            margin-top: 10px;
-            font-size: 1.1em;
-            color: #2e3a59;
-            text-decoration: none;
-        }
-
-        article a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            background-color: #2e3a59;
-            color: yellow;
-            padding: 20px;
-            text-align: center;
-        }
-
-        footer a {
-            color: white;
-            margin: 0 10px;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        .footer-links {
-            margin-top: 20px;
-        }
-
-        .footer-links a {
-            margin: 0 20px;
-        }
-
-        /* Style pour les blocs de publicité */
-        .adsense-container {
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        /* Menu contextuel */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: #000;
-        }
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: 15% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 600px;
-        }
-
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-    </style>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SmartFixLab – Astuces Tech</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+    nav {
+      background: #2d2dff;
+      color: #fff;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .logo {
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    nav ul li {
+      margin-left: 20px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+    header, main {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #2d2dff;
+    }
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .card h3 {
+      margin-top: 0;
+    }
+    .date {
+      font-size: 0.9em;
+      color: #888;
+    }
+    footer {
+      background: #2d2dff;
+      color: #fff;
+      text-align: center;
+      padding: 20px 10px;
+    }
+    footer a {
+      color: #fff;
+      margin: 0 10px;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 500px;
+      max-height: 80vh;
+      overflow-y: auto;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+    .close {
+      float: right;
+      cursor: pointer;
+      font-size: 1.2em;
+      color: #333;
+    }
+  </style>
 </head>
 <body>
+
+  <nav>
+    <div class="logo">SmartFixLab</div>
+    <ul>
+      <li><a href="#articles">Articles</a></li>
+    </ul>
+  </nav>
+
   <header>
-    <h1>Bienvenue sur le site internet edutogo</h1>
-    <p>tenez vous au courant de toutes les Actualités Educatives du togo</p>
+    <h1>Bienvenue sur SmartFixLab</h1>
+    <p>Des astuces tech, tutoriels et solutions pratiques pour tous.</p>
   </header>
-      <section>
-        <!-- Premier article -->
-        <article>
-            <img src="https://yop.l-frii.com/wp-content/uploads/2023/09/Les-10-priorites-du-gouvernement-pour-lannee-scolaire-2023-2024.jpg" alt="">
-            <h2>Les 7 priorités de l'éducation pour l'année scolaire 2024</h2>
-            <p>Découvrez les nouvelles mesures mises en place par le gouvernement togolais pour cette année scolaire.</p>
-            <a href="#">Lire l'article</a>
-        </article>
 
-        <!-- Bloc de publicité AdSense -->
-        <div class="adsense-container">
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-9443340060928874"
-                data-ad-slot="1234567890"
-                data-ad-format="auto"></ins>
-        </div>
+  <main>
+    <section id="articles">
+      <h2>Articles populaires</h2>
 
-        <!-- Deuxième article -->
-        <article>
-            <img src="https://www.togofirst.com/sites/default/files/styles/large/public/2024-10/1526_salles_de_classe.jpg" alt="">
-            <h2>1526 nouvelles salles de classe pour la rentrée 2024</h2>
-            <p>Le ministère de l'Éducation a annoncé un plan ambitieux pour améliorer les infrastructures scolaires à travers le pays.</p>
-            <a href="#">Lire l'article</a>
-        </article>
+      <article class="card">
+        <h3>Comment accélérer votre téléphone Android</h3>
+        <p class="date">Publié le 3 mai 2025</p>
+        <ol>
+          <li>Désinstallez les applis inutilisées.</li>
+          <li>Videz le cache.</li>
+          <li>Réduisez les animations.</li>
+          <li>Mettez Android à jour.</li>
+        </ol>
+      </article>
 
-        <!-- Bloc de publicité AdSense -->
-        <div class="adsense-container">
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-9443340060928874"
-                data-ad-slot="1234567890"
-                data-ad-format="auto"></ins>
-        </div>
+      <article class="card">
+        <h3>Récupérer un mot de passe Wi-Fi sur Windows</h3>
+        <p class="date">Publié le 28 avril 2025</p>
+        <ol>
+          <li>Ouvrez le CMD et tapez : <code>netsh wlan show profiles</code></li>
+          <li>Puis : <code>netsh wlan show profile name="nom" key=clear</code></li>
+        </ol>
+      </article>
 
-        <!-- Troisième article -->
-        <article>
-            <img src="https://education.gouv.tg/wp-content/uploads/2024/09/enseignement_numerique.jpg" alt="">
-            <h2>Lancement du programme d'enseignement numérique dans les écoles</h2>
-            <p>Le gouvernement a lancé une initiative pour intégrer des outils numériques dans les classes au Togo.</p>
-            <a href="#">Lire l'article</a>
-        </article>
+      <article class="card">
+        <h3>Top 5 des applis gratuites de retouche photo</h3>
+        <p class="date">Publié le 20 avril 2025</p>
+        <ul>
+          <li>Snapseed</li>
+          <li>Lightroom</li>
+          <li>Canva</li>
+        </ul>
+      </article>
 
-        <!-- Bloc de publicité AdSense -->
-        <div class="adsense-container">
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-9443340060928874"
-                data-ad-slot="1234567890"
-                data-ad-format="auto"></ins>
-        </div>
+      <article class="card">
+        <h3>Libérez de l’espace sur votre smartphone</h3>
+        <p class="date">Publié le 18 avril 2025</p>
+        <ol>
+          <li>Supprimez les fichiers téléchargés inutiles.</li>
+          <li>Utilisez Google Photos pour sauvegarder et effacer les photos locales.</li>
+          <li>Effacez le cache des applications.</li>
+          <li>Désinstallez les jeux volumineux que vous n'utilisez plus.</li>
+        </ol>
+      </article>
 
-        <!-- Quatrième article -->
-        <article>
-            <img src="https://www.republiquetogolaise.com/sites/default/files/styles/large/public/2024-09/reforme_programme_scolaire.jpg" alt="">
-            <h2>Réforme des programmes scolaires : un nouveau curriculum pour 2024</h2>
-            <p>Le ministère de l'Éducation annonce une mise à jour des programmes scolaires afin de les rendre plus pertinents pour les étudiants de demain.</p>
-            <a href="#">Lire l'article</a>
-        </article>
+      <article class="card">
+        <h3>Protéger vos comptes avec l’authentification à deux facteurs</h3>
+        <p class="date">Publié le 15 avril 2025</p>
+        <ol>
+          <li>Activez 2FA sur Gmail, Facebook, Instagram…</li>
+          <li>Utilisez une app comme Google Authenticator ou Authy.</li>
+          <li>Gardez vos codes de secours dans un endroit sécurisé.</li>
+        </ol>
+      </article>
 
-        <!-- Bloc de publicité AdSense -->
-        <div class="adsense-container">
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-9443340060928874"
-                data-ad-slot="1234567890"
-                data-ad-format="auto"></ins>
-        </div>
+      <article class="card">
+        <h3>Réparer une clé USB non reconnue</h3>
+        <p class="date">Publié le 10 avril 2025</p>
+        <ul>
+          <li>Essayez un autre port USB ou un autre ordinateur.</li>
+          <li>Ouvrez la gestion des disques et attribuez une lettre de lecteur.</li>
+          <li>Formatez la clé (si nécessaire) avec un outil comme Rufus.</li>
+        </ul>
+      </article>
 
-        <!-- Cinquième article -->
-        <article>
-            <img src="https://icilome.com/wp-content/uploads/2024/10/bourses_etudes_internationales.jpg" alt="">
-            <h2>Des bourses d'études pour les étudiants togolais à l'international</h2>
-            <p>Le gouvernement a mis en place un nouveau programme de bourses pour encourager les étudiants à poursuivre leurs études à l'étranger.</p>
-            <a href="#">Lire l'article</a>
-        </article>
+      <article class="card">
+        <h3>Installer Android sur un vieux PC</h3>
+        <p class="date">Publié le 5 avril 2025</p>
+        <ol>
+          <li>Téléchargez une image ISO Android x86.</li>
+          <li>Créez une clé bootable avec Rufus.</li>
+          <li>Démarrez sur la clé et installez Android.</li>
+        </ol>
+      </article>
 
-        <!-- Bloc de publicité AdSense -->
-        <div class="adsense-container">
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-9443340060928874"
-                data-ad-slot="1234567890"
-                data-ad-format="auto"></ins>
-        </div>
-        <!-- Footer avec Menu contextuel -->
-        <footer>
-            <div class="footer-links">
-                <a href="#" id="aboutBtn">À propos</a> |
-                <a href="#" id="privacyBtn">Politique de confidentialité</a>
-            </div>
-            <p>&copy; 2024 Actualités Educatives - Togo. Tous droits réservés.</p>
-        </footer>
-    <!-- Activation de l'annonce AdSense -->
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-        <!-- Modal : À propos -->
-        <div id="aboutModal" class="modal">
-            <div class="modal-content">
-                <span class="close" id="closeAbout">&times;</span>
-                <h2>À propos</h2>
-                <p>Nous fournissons des informations à jour sur l'éducation au Togo. Notre objectif est de tenir les citoyens informés des nouvelles politiques éducatives, des réformes scolaires et des opportunités d'éducation dans le pays.</p>
-            </div>
-        </div>
+      <article class="card">
+        <h3>Comment réparer une application qui plante</h3>
+        <p class="date">Publié le 1er avril 2025</p>
+        <ul>
+          <li>Videz le cache de l’application dans les paramètres.</li>
+          <li>Mettez l’application à jour.</li>
+          <li>Désinstallez et réinstallez l’application.</li>
+          <li>Redémarrez votre appareil.</li>
+        </ul>
+      </article>
 
-        <!-- Modal : Politique de confidentialité -->
-        <div id="privacyModal" class="modal">
-            <div class="modal-content">
-                <span class="close" id="closePrivacy">&times;</span>
-                <h2>Politique de confidentialité</h2>
-                <p>Nous respectons votre vie privée et nous engageons à protéger les informations personnelles que vous nous fournissez. Nous utilisons des cookies pour améliorer l'expérience de navigation sur notre site.</p>
-            </div>
-        </div>
+    </section>
+  </main>
 
-        <script>
-            // Modals
-            const aboutBtn = document.getElementById("aboutBtn");
-            const privacyBtn = document.getElementById("privacyBtn");
-            const aboutModal = document.getElementById("aboutModal");
-            const privacyModal = document.getElementById("privacyModal");
-            const closeAbout = document.getElementById("closeAbout");
-            const closePrivacy = document.getElementById("closePrivacy");
+  <footer>
+    <p>&copy; 2025 SmartFixLab</p>
+    <div>
+      <a onclick="openModal('about')">À propos</a> |
+      <a onclick="openModal('contact')">Contact</a> |
+      <a onclick="openModal('privacy')">Confidentialité</a>
+    </div>
+  </footer>
 
-            aboutBtn.onclick = function () {
-                aboutModal.style.display = "block";
-            }
+  <div id="modal-about" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('about')">&times;</span>
+      <h2>À propos de SmartFixLab</h2>
+      <p>SmartFixLab est un site dédié aux passionnés de technologie et aux utilisateurs souhaitant résoudre leurs problèmes informatiques du quotidien.</p>
+      <p>Nous partageons des astuces pratiques, des tutoriels simples et des solutions concrètes.</p>
+    </div>
+  </div>
 
-            privacyBtn.onclick = function () {
-                privacyModal.style.display = "block";
-            }
+  <div id="modal-contact" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('contact')">&times;</span>
+      <h2>Contact</h2>
+      <p>Pour toute demande, écrivez-nous à :</p>
+      <p><strong>Email :</strong> richardawi222@gmail.com</p>
+    </div>
+  </div>
 
-            closeAbout.onclick = function () {
-                aboutModal.style.display = "none";
-            }
+  <div id="modal-privacy" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('privacy')">&times;</span>
+      <h2>Politique de confidentialité</h2>
+      <p>Nous respectons votre vie privée. Des cookies peuvent être utilisés à des fins de personnalisation des publicités (Google AdSense).</p>
+      <p>En utilisant ce site, vous acceptez cette utilisation. Vous pouvez désactiver les cookies via votre navigateur.</p>
+    </div>
+  </div>
 
-            closePrivacy.onclick = function () {
-                privacyModal.style.display = "none";
-            }
+  <script>
+    function openModal(id) {
+      document.getElementById(`modal-${id}`).style.display = 'flex';
+    }
 
-            window.onclick = function (event) {
-                if (event.target == aboutModal || event.target == privacyModal) {
-                    aboutModal.style.display = "none";
-                    privacyModal.style.display = "none";
-                }
-            }
-        </script>
+    function closeModal(id) {
+      document.getElementById(`modal-${id}`).style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+      document.querySelectorAll('.modal').forEach(modal => {
+        if (event.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
 </body>
-
 </html>
